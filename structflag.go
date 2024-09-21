@@ -92,6 +92,7 @@ func Load(v interface{}) {
 func LoadTo(fs *flag.FlagSet, prefix string, v interface{}) {
 	val := reflect.ValueOf(v).Elem()
 	load(fs, prefix, val)
+	flag.Parse()
 }
 
 func load(fs *flag.FlagSet, prefix string, val reflect.Value) {
