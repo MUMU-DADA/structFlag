@@ -13,6 +13,7 @@ import (
 // 这些标志将创建在 flag.CommandLine 上，这是默认（全局）的 FlagSet。标志名称不带前缀。
 func Load(v interface{}) {
 	LoadTo(flag.CommandLine, "", v)
+	flag.Parse()
 }
 
 // LoadTo 为给定 FlagSet 的结构体的每个字段创建一个命令行标志。
